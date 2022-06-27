@@ -1,0 +1,84 @@
+$p:pointer;
+$backcolor:#FFFEFB;
+$textcolor:#3F3F3F;
+$input-shadow :0px 2px 5px rgba(0, 0, 0, 0.1);
+$rel:relative;
+.main {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.main__todo_container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.main__input {
+  width: 210px;
+  padding: 15px;
+  outline: none;
+  background: transparent;
+  border:2px solid gray;
+  font-size:16px;
+  color:white;
+}
+
+.main__button {
+  width: 90px;
+  border: 2px solid gray;
+  border-left:none;
+  padding: 15px 0;
+  font-size:16px;
+  text-align: center;
+  background-color: #485461;
+  background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+  cursor: pointer;
+  color:white;
+
+}
+.filter_block{
+  background-color:$backcolor;
+  margin-top:25px;
+  position:$rel;
+  height:36px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  width:335px;
+  cursor: $p;
+  transition:0.6s all;
+  img{
+    width:9%;
+    position: $rel;
+    left:2px;
+    top:2px;
+    
+  }
+  span{
+    color:$textcolor;
+    font-size:18px;
+  }
+}
+.choose_filter_block{
+  position: absolute;
+  display:flex;
+  flex-direction: column;
+  background-color:$backcolor;
+  box-shadow: $input-shadow;
+  z-index:100;
+  top:100%;
+  overflow: auto;
+  width:335px;
+  span{
+    cursor: $p;
+    font-size:18px;
+  }
+   span:hover{
+     background-color:#FF8484;
+     color:white;
+     font-size:18px;
+   }
+}
